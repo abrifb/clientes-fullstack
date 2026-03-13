@@ -13,9 +13,8 @@ app.use(express.json());
 app.use(express.static('public'));
 
 
-// =========================
 // GET /clientes
-// =========================
+
 
 app.get('/clientes', async (req, res) => {
 
@@ -37,9 +36,8 @@ app.get('/clientes', async (req, res) => {
 });
 
 
-// =========================
 // POST /clientes
-// =========================
+
 
 app.post('/clientes', async (req, res) => {
 
@@ -72,9 +70,9 @@ app.post('/clientes', async (req, res) => {
 
 });
 
-// =========================
-// PUT /clientes/:id
-// =========================
+
+// PUT 
+
 
 app.put('/clientes/:id', async (req, res) => {
 
@@ -110,9 +108,8 @@ app.put('/clientes/:id', async (req, res) => {
 
 });
 
-// =========================
-// DELETE /clientes/:id
-// =========================
+
+// DELETE 
 
 app.delete('/clientes/:id', async (req, res) => {
 
@@ -148,9 +145,7 @@ app.delete('/clientes/:id', async (req, res) => {
 });
 
 
-// =========================
 // INICIAR SERVIDOR
-// =========================
 
 async function iniciarServidor() {
 

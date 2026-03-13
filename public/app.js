@@ -8,9 +8,7 @@ const nombreInput = document.getElementById("nombre");
 const emailInput = document.getElementById("email");
 
 
-// =============================
 // LISTAR CLIENTES
-// =============================
 
 async function listarClientes() {
 
@@ -47,9 +45,7 @@ async function listarClientes() {
 document.getElementById("listar").onclick = listarClientes;
 
 
-// =============================
 // AGREGAR O EDITAR CLIENTE
-// =============================
 
 form.onsubmit = async (e) => {
 
@@ -64,8 +60,6 @@ form.onsubmit = async (e) => {
 
   if (id === "") {
 
-    // CREAR
-
     await fetch(API, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -76,7 +70,6 @@ form.onsubmit = async (e) => {
 
   } else {
 
-    // ACTUALIZAR
 
     await fetch(API + "/" + id, {
       method: "PUT",
@@ -96,9 +89,8 @@ form.onsubmit = async (e) => {
 };
 
 
-// =============================
 // CARGAR CLIENTE PARA EDITAR
-// =============================
+
 
 function editarCliente(id, nombre, email) {
 
@@ -109,9 +101,8 @@ function editarCliente(id, nombre, email) {
 }
 
 
-// =============================
 // ELIMINAR CLIENTE
-// =============================
+
 
 async function eliminarCliente(id) {
 
@@ -130,8 +121,6 @@ async function eliminarCliente(id) {
 }
 
 
-// =============================
 // CARGAR CLIENTES AL INICIAR
-// =============================
 
 listarClientes();
